@@ -4,7 +4,7 @@ Meta.OS=Windows
 Meta.AarchSupport=NotSupported
 Meta.Arch=x86_64
 Meta.Author=schliebe-plg
-Meta.URL=https://store.steampowered.com/app/1266540/Ships_At_Sea/
+Meta.URL=https://steampowered.com
 Meta.DisplayImageSource=steam:1266540
 Meta.EndpointURIFormat=
 Meta.ConfigManifest=
@@ -16,36 +16,57 @@ Meta.ConfigReleaseState=NotSpecified
 Meta.NoCommercialUsage=True
 Meta.ConfigVersion=2
 
-# --- Directory Mapping Paths ---
+# --- App Infrastructure Setup ---
 App.DisplayName=Ships at Sea
 App.RootDir=./ships-at-sea/
 App.BaseDirectory=./ships-at-sea/
 App.WorkingDir=./
+App.StoresSupported=None
+App.StoreSpecificSettings={}
+App.StoreDownloadLocations={}
+App.AppSettings={}
+App.EnvironmentVariables={}
 
-# --- Executable Targets ---
+# --- Executable and Process Control ---
 App.ExecutableWin=SasServer.exe
+App.ExecutableLinux=
 App.MonitorChildProcessName=SASServer-Win64-Shipping.exe
+App.MonitorDirectChildOnly=False
+App.DumpFullChildProcessTree=False
 App.CommandLineArgs={{$PlatformArgs}} -log -Port={{$MainGamePort}} -QueryPort={{$SteamQueryPort}}
 App.CommandLineParameterFormat=+{0} {1}
 App.CommandLineParameterDelimiter= 
 
-# --- Port Declarations (Embedded Directly) ---
+# --- Port Declarations ---
 App.Ports=[{"Name":"Main Game Port","Ref":"MainGamePort","Direction":"Inbound","Protocol":"Both","Port":7777,"HostPort":7777,"PortRange":1},{"Name":"Steam Query Port","Ref":"SteamQueryPort","Direction":"Inbound","Protocol":"Both","Port":15000,"HostPort":15000,"PortRange":1}]
 App.PrimaryApplicationPortRef=MainGamePort
+App.AdminPortRef=MainGamePort
+App.UniversalSleepApplicationUDPPortRef=MainGamePort
 App.UniversalSleepSteamQueryPortRef=SteamQueryPort
 
-# --- Update Source Deployment ---
+# --- Update Pipeline ---
 App.SteamUpdateAnonymousLogin=true
 App.UpdateSources=[{"StageName":"SteamCMD Download","SourceType":"SteamCMD","Platform":"Windows","AppID":3951240}]
+App.PreStartStages=[]
+App.CommandTriggers={}
+App.UserActions=[]
+App.ForceUpdate=False
 
-# --- Management & Console ---
+# --- Panel Interactivity & Console ---
 App.AdminMethod=STDIO
 App.HasWriteableConsole=False
 App.HasReadableConsole=True
 App.UseSteamQueryForStatus=True
 App.ApplicationReadyMode=RegexMatch
 Console.AppReadyRegex=^.*Game engine initialized.*$
+Console.FilterMatchRegex=
+Console.FilterMatchReplacement=
+Console.ThrowawayMessageRegex=
 
-# --- Shutdown Properties ---
+# --- Process Lifecycle ---
 App.ExitMethod=OS_CLOSE
 App.ExitTimeout=30
+App.RestartDelaySeconds=0
+App.RapidStartup=False
+App.SupportsLiveSettingsChanges=False
+
