@@ -3,8 +3,8 @@
     "authors": [
         "jschliebe - Made with AMP Config Generator"
     ],
-    "origin": "https://github.com/jschliebe/AMPTemplates.git",
-    "url": "https://github.com/jschliebe/AMPTemplates",
+    "origin": "https://github.com/schliebe-plg/amp.git",
+    "url": "https://github.com/schliebe-plg/amp",
     "imagefile": "",
-    "prefix": "jschliebe"
+    "prefix": "schliebe-plg"
 }
