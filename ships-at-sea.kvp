@@ -35,10 +35,10 @@ App.StoreSpecificSettings={}
 App.StoreDownloadLocations={}
 App.ExecutableWin=SasServer.exe
 App.ExecutableLinux=
-App.WorkingDir=
+App.WorkingDir=./
 App.LinuxCommandLineArgs=
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} -log -Port={{$MainGamePort}} -QueryPort={{$QueryPort}}
+App.CommandLineArgs={{$PlatformArgs}} -log -Port={{$MainGamePort}} -QueryPort={{$SteamQueryPort}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"1266540"}
@@ -91,7 +91,7 @@ App.RapidStartup=False
 App.SmartExcludeExemptions=["*.cfg","*.conf","*.config","*.ini","*.json","*.xml","*.properties","*.kvp","*.yml","*.yaml","*.toml","*.lua"]
 App.SmartExcludeSupported=True
 App.DumpFullChildProcessTree=False
-App.MonitorChildProcessName=
+App.MonitorChildProcessName=SASServer-Win64-Shipping.exe
 App.MonitorDirectChildOnly=False
 App.SupportsUniversalSleep=False
 App.UseSteamQueryForStatus=True
