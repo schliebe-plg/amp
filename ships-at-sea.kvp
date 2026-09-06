@@ -29,13 +29,13 @@ Meta.ImportableExtensions=[]
 Meta.AppIsMultiIPAware=False
 App.DisplayName=Ships at Sea
 App.RootDir=./ships-at-sea/
-App.BaseDirectory=./ships-at-sea/
+App.BaseDirectory=./ships-at-sea/3951240/
 App.StoresSupported=None
 App.StoreSpecificSettings={}
 App.StoreDownloadLocations={}
-App.ExecutableWin=SasServer.exe
+App.ExecutableWin=3951240\SasServer.exe
 App.ExecutableLinux=
-App.WorkingDir=./
+App.WorkingDir=3951240
 App.LinuxCommandLineArgs=
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} -log -Port={{$MainGamePort}} -QueryPort={{$SteamQueryPort}}
