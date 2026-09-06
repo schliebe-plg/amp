@@ -1,0 +1,10 @@
+{
+  "Templates": [
+    {
+      "Title": "Ships at Sea",
+      "Description": "Ships at Sea Dedicated Server Template",
+      "FileName": "shipsatsea.kv",
+      "AppType": "Generic"
+    }
+  ]
+}
