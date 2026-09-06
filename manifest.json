@@ -1,10 +1,10 @@
 {
-  "Templates": [
-    {
-      "Title": "Ships at Sea",
-      "Description": "Ships at Sea Dedicated Server Template",
-      "FileName": "shipsatsea.kv",
-      "AppType": "Generic"
-    }
-  ]
+    "id": "dd1ac984-260e-4e28-a46c-cdfe5e5c27ef",
+    "authors": [
+        "jschliebe - Made with AMP Config Generator"
+    ],
+    "origin": "https://github.com/jschliebe/AMPTemplates.git",
+    "url": "https://github.com/jschliebe/AMPTemplates",
+    "imagefile": "",
+    "prefix": "jschliebe"
 }
