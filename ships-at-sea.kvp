@@ -38,7 +38,7 @@ App.ExecutableLinux=
 App.WorkingDir=3951240
 App.LinuxCommandLineArgs=
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} -log -Port={{$MainGamePort}} -QueryPort={{$SteamQueryPort}}
+App.CommandLineArgs={{$PlatformArgs}} -log -Port={{$MainGamePort}} -QueryPort={{$SteamQueryPort}} -NOSTEAM
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"1266540"}
