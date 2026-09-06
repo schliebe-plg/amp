@@ -15,8 +15,6 @@ Meta.DockerRequired=False
 Meta.ConfigReleaseState=NotSpecified
 Meta.NoCommercialUsage=True
 Meta.ConfigVersion=2
-
-# --- App Infrastructure Setup ---
 App.DisplayName=Ships at Sea
 App.RootDir=./ships-at-sea/
 App.BaseDirectory=./ships-at-sea/
@@ -26,8 +24,6 @@ App.StoreSpecificSettings={}
 App.StoreDownloadLocations={}
 App.AppSettings={}
 App.EnvironmentVariables={}
-
-# --- Executable and Process Control ---
 App.ExecutableWin=SasServer.exe
 App.ExecutableLinux=
 App.MonitorChildProcessName=SASServer-Win64-Shipping.exe
@@ -36,23 +32,17 @@ App.DumpFullChildProcessTree=False
 App.CommandLineArgs={{$PlatformArgs}} -log -Port={{$MainGamePort}} -QueryPort={{$SteamQueryPort}}
 App.CommandLineParameterFormat=+{0} {1}
 App.CommandLineParameterDelimiter= 
-
-# --- Port Declarations ---
 App.Ports=[{"Name":"Main Game Port","Ref":"MainGamePort","Direction":"Inbound","Protocol":"Both","Port":7777,"HostPort":7777,"PortRange":1},{"Name":"Steam Query Port","Ref":"SteamQueryPort","Direction":"Inbound","Protocol":"Both","Port":15000,"HostPort":15000,"PortRange":1}]
 App.PrimaryApplicationPortRef=MainGamePort
 App.AdminPortRef=MainGamePort
 App.UniversalSleepApplicationUDPPortRef=MainGamePort
 App.UniversalSleepSteamQueryPortRef=SteamQueryPort
-
-# --- Update Pipeline ---
 App.SteamUpdateAnonymousLogin=true
 App.UpdateSources=[{"StageName":"SteamCMD Download","SourceType":"SteamCMD","Platform":"Windows","AppID":3951240}]
 App.PreStartStages=[]
 App.CommandTriggers={}
 App.UserActions=[]
 App.ForceUpdate=False
-
-# --- Panel Interactivity & Console ---
 App.AdminMethod=STDIO
 App.HasWriteableConsole=False
 App.HasReadableConsole=True
@@ -62,8 +52,6 @@ Console.AppReadyRegex=^.*Game engine initialized.*$
 Console.FilterMatchRegex=
 Console.FilterMatchReplacement=
 Console.ThrowawayMessageRegex=
-
-# --- Process Lifecycle ---
 App.ExitMethod=OS_CLOSE
 App.ExitTimeout=30
 App.RestartDelaySeconds=0
